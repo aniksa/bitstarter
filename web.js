@@ -6,7 +6,7 @@ app.get('/', function(request, response) {
   var fs=require('fs');
   var infile = "index.html";
   var buf = new Buffer(256); 
-  buf.write(fs.readFile(infile));
+  buf = fs.readFile(infile);
   response.send(buf.toString());
 });
 
